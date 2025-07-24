@@ -1,0 +1,68 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>UPDATE</h3>
+    <form action="/listing/<%= listing._id %>/edit?_method=PATCH" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <div class="row">
+            <div class="col-6 offset-2">
+                <div class="mb-3">
+                    <label class="form-label" for="title">
+                        TITLE
+                    </label>
+                    <input class="form-control" type="text" name="title" id="title" placeholder="enter a catchy name" value="<%= listing.title %>" >
+                    <div class="invalid-feedback">Please provide a valid Title.</div>
+                    <div class="valid-feedback">Great Title.</div>
+                </div>
+
+                <div>
+                    <p id="pa">ORIGINAL IMAGE:</p>
+                    <img src=<%= url %> alt="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="image">
+                        IMAGE
+                    </label>
+                    <input class="form-control" type="file" name="image" id="image" value="<%= listing.image %>">
+                    <!-- <div class="invalid-feedback">Please provide a valid Image URL.</div> -->
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="description">
+                        DESCRIPTION
+                    </label>
+                    <textarea class="form-control" type="text" name="description" id="description" placeholder="more about the place" required><%= listing.description %></textarea>
+                    <div class="invalid-feedback">Please provide a valid Description.</div>
+                </div>
+                
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label" for="price">
+                            PRICE
+                        </label>
+                        <input class="form-control" type="text" name="price" id="price" placeholder="1200" value="<%= listing.price %>" required>
+                        <div class="invalid-feedback">Please provide a valid Price.</div>
+                    </div>
+                    <div class="mb-3 col-md-8   ">
+                        <label class="form-label" for="location">
+                            LOCATION
+                        </label>
+                        <input class="form-control" type="text" name="location" id="location" placeholder="bengaluru,karnataka" value="<%= listing.location %>" required>
+                        <div class="invalid-feedback">Please provide a valid Location.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="country">
+                        COUNTRY
+                    </label>
+                    <input class="form-control" type="text" name="country" id="country" placeholder="india" value="<%= listing.country %>" required>
+                    <div class="invalid-feedback">Please provide a valid country.</div>
+                </div>
+                
+                <br>
+                <button class="btn btn-dark">UPDATE</button> 
+            </div>
+        </div>
+    </form>
+</body>

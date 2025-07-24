@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>ADD NEW PLACE</h3>
+    <form action="/listing" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+        <div class="row">
+
+            <div class="col-8 offset-2">
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">TITLE</label>
+                    <input class="form-control" type="text" name="title" id="title" placeholder="ENTER A CATCHY TITLE" required>
+                    <div class="invalid-feedback">Please provide a valid Title.</div>
+                    <div class="valid-feedback">Great Title.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="image" class="form-label">UPLOAD IMAGE</label>
+                    <input class="form-control" type="file" name="image" id="image">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="description" class="form-label">DESCRIPTION</label>
+                    <textarea class="form-control" type="text" name="description" id="description" placeholder="ABOUT THE PLACE" required></textarea>
+                    <div class="invalid-feedback">Please provide a valid Description.</div>
+                </div>
+                
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">PRICE</label>
+                    <input class="form-control" type="text" name="price" id="price" placeholder="1200" required>
+                    <div class="invalid-feedback">Please provide a valid Price.</div>
+                </div>
+        
+                <div class="mb-3 col-md-8">
+                    <label for="location" class="form-label">LOCATION</label>
+                    <input class="form-control" type="text" name="location" id="location" placeholder="BENGALURU,KATNATAKA" required>
+                    <div class="invalid-feedback">Please provide a valid Location.</div>
+                </div>
+
+                </div>
+        
+                <div class="mb-3">
+                    <label for="country" class="form-label">COUNTRY</label>
+                    <input class="form-control" type="text" name="country" id="country" placeholder="INDIA" required>
+                    <div class="invalid-feedback">Please provide a valid country.</div>
+                </div>
+
+                <br>
+
+                <button class="btn btn-dark">ADD</button>
+
+            </div>
+
+        </div>
+
+    </form>
+</body>
