@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  width: 98vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -246,8 +246,43 @@ div p {
 }
 
 @media (max-width:500px){
+  
+  html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #review{
+    margin-left: 10px;
+  }
+
+  .showImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .review-card {
+    margin: 0 auto;
+  }
+
   #tax-toggle{
     display: none;
   }
-  
+
+  #map{
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem !important;
+  }
+
+  .showImg{
+    margin-left: 50px;
+  }
+}
+
+nav, footer {
+  margin: 0;
+  padding: 0;
 }

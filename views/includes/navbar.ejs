@@ -1,3 +1,4 @@
+<div id="top-nav">
 <nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
     <div class="container-fluid" id="main-navbar">
       <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a>
@@ -27,14 +28,14 @@
       </div>
     </div> 
   </nav>
-
+</div>
   <script>
 document.addEventListener("DOMContentLoaded", function () {
   const collapse = document.querySelector("#navbarNavAltMarkup");
   const content = document.querySelector(".page-content");
 
   collapse.addEventListener("show.bs.collapse", () => {
-    const heightEstimate = 160; 
+    const heightEstimate = 200; 
     content.style.marginTop = heightEstimate + 'px';
   });
 
