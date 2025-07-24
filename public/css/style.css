@@ -244,3 +244,10 @@ div p {
   background-color: #fe424d !important;
   color: white !important;
 }
+
+@media (max-width:500px){
+  #tax-toggle{
+    display: none;
+  }
+  
+}
